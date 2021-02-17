@@ -10,7 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
-          command: ./gradlew build
+          name : Download Dependencies
+          #command: ./gradlew build
+          command: sudo chmod +x ./gradlew
       - run:
           name: Install Fastlane
           command: bundle install
